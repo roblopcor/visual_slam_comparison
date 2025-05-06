@@ -1,0 +1,36 @@
+Backup del Dockerfile original: Dockerfile_og
+
+Dockerfile nuevo: 
+- Añadido rviz y rqt_graph a la imagen
+- Añadido archivo de manejo de contenedor para habilitar parámetros visuales en el docker (docker-compose.yml)
+
+Preparación:
+- Dentro del directorio VINS-Fusion/docker construir imagen
+	docker build -t vins-fusion-rviz .
+
+- Descargar docker-compose
+	sudo apt update
+	sudo apt install docker-compose
+	
+Pasos:
+1. Otorga permisos al entorno gráfico (cada vez que abras un nuevo terminal)
+	xhost +local:root
+
+2. Levanta el contenedor
+	docker-compose up
+
+3. Abrir nuevo terminal y entrar en el container
+	docker exec -it vins_fusion_rviz bash
+
+4. Cargar entorno de ROS
+	source /opt/ros/kinetic/setup.bash
+	source /root/catkin_ws/devel/setup.bash
+
+5. Ejecutar comando deseado, ej:
+	roslaunch vins vins_rviz.launch
+
+9. Detener el contenedor
+	Crtl+C
+	docker-compose down
+
+
