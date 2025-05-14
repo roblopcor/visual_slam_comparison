@@ -1,2 +1,3 @@
-# Ampliacion_de_Robotica
-Comparación de métodos SLAM visuales.
+# Proyecto: Comparación  de métodos visuales SLAM
+
+
