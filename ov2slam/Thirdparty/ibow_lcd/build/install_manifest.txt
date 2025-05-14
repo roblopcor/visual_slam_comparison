@@ -1,0 +1,5 @@
+/usr/local/lib/liblcdetector.so
+/usr/local/include//ibow_lcd/island.h
+/usr/local/include//ibow_lcd/lcdetector.h
+/usr/local/lib/lcdetector/cmake/lcdetectorConfig.cmake
+/usr/local/lib/lcdetector/cmake/lcdetectorConfig-release.cmake

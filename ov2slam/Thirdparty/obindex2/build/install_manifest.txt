@@ -1,0 +1,8 @@
+/usr/local/lib/libobindex2.so
+/usr/local/include//obindex2/binary_tree.h
+/usr/local/include//obindex2/binary_descriptor.h
+/usr/local/include//obindex2/binary_tree_node.h
+/usr/local/include//obindex2/priority_queues.h
+/usr/local/include//obindex2/binary_index.h
+/usr/local/lib/obindex2/cmake/obindex2Config.cmake
+/usr/local/lib/obindex2/cmake/obindex2Config-release.cmake
