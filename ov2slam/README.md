@@ -28,7 +28,7 @@ docker run -it --name ov2slam_container --privileged --net=host \
 Open 3 terminals with:
 
 ```
-docker exec -it ov2slam-humble-amd64 bash 
+docker exec -it ov2slam_container bash 
 ```
 
 - First terminal:
