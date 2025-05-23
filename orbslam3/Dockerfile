@@ -34,6 +34,8 @@ RUN mkdir -p $ROS_WS/src
 RUN git clone https://github.com/zang09/ORB-SLAM3-STEREO-FIXED.git $ROS_WS/src/ORB_SLAM3 \
  && git clone https://github.com/zang09/ORB_SLAM3_ROS2.git $ROS_WS/src/orbslam3_ros2
 
+RUN mkdir -p $ROS_WS/src/orbslam3_ros2/shared
+
 RUN echo "source /opt/ros/foxy/setup.bash" >> /root/.bashrc
 
 ####################
@@ -83,6 +85,10 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN sed -i 's|set(ORB_SLAM3_ROOT_DIR.*)|set(ORB_SLAM3_ROOT_DIR "/root/ros2_ws/src/ORB_SLAM3")|' /root/ros2_ws/src/orbslam3_ros2/CMakeModules/FindORB_SLAM3.cmake
+
+# Reemplazar los tópicos de las cámaras en stereo-slam-node.cpp
+RUN sed -i 's|"camera/left"|"/cam0/image_raw"|' /root/ros2_ws/src/orbslam3_ros2/src/stereo/stereo-slam-node.cpp && \
+    sed -i 's|"camera/right"|"/cam1/image_raw"|' /root/ros2_ws/src/orbslam3_ros2/src/stereo/stereo-slam-node.cpp
 
 WORKDIR /root/ros2_ws/src/ORB_SLAM3/Thirdparty/Sophus/build
 RUN make install
