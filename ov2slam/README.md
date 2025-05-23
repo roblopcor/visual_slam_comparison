@@ -57,7 +57,7 @@ ros2 bag play /ws/src/ov2slam/shared/<rosbag2_name>
 
 To start the container:
 ```
-docker init ov2slam_container
+docker start ov2slam_container
 ```
 
 To stop the container:
