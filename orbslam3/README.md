@@ -12,6 +12,7 @@ xhost +local:root  # Permitir acceso al servidor X desde contenedores
 docker run --rm -it \
   --env="DISPLAY" \
   --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+  --volume /home/[<local_path>]/[<local_path>]:/root/ros2_ws/src/orbslam3_ros2/shared \ 
   --device /dev/dri \
   --network host \
   orbslam3_foxy \
