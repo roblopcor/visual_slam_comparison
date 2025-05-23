@@ -1,8 +1,11 @@
-
+## Building
 ```
 cd orb3slam
 docker build -t orbslam3_foxy .
 ```
+
+## Create container
+
 ```
 xhost +local:root  # Permitir acceso al servidor X desde contenedores
 
@@ -17,10 +20,12 @@ docker run --rm -it \
 xhost -local:root  # Revocar permiso al terminar
 ```
 
-Una vez dentro:
+## Inside container
 
 ```
 source ~/ros2_ws/install/local_setup.bash 
 ros2 run orbslam3 stereo /root/ros2_ws/src/orbslam3_ros2/vocabulary/ORBvoc.txt /root/ros2_ws/src/orbslam3_ros2/config/stereo/KITTI00-02.yaml BOOL_RECTIFY [BOOL_EQUALIZE]
 ```
+
+## Extras
 
