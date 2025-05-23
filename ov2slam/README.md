@@ -57,17 +57,17 @@ ros2 bag play /ws/src/ov2slam/shared/<rosbag2_name>
 
 To start the container:
 ```
-docker init ov2slam-humble-amd64
+docker init ov2slam_container
 ```
 
 To stop the container:
 ```
-docker stop ov2slam-humble-amd64
+docker stop ov2slam_container
 ```
 
 To delete the container:
 ```
-docker kill ov2slam-humble-amd64
+docker kill ov2slam_container
 ```
 
 ## ov2slam Reference
