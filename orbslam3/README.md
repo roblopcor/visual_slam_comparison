@@ -24,10 +24,15 @@ xhost -local:root  # Revocar permiso al terminar
 
 ## Inside container
 
+```
+xhost +local:docker # Remember always to execute this in your host machine
+```
+
 - Open first terminal:
 ```
-source ~/ros2_ws/install/local_setup.bash 
-ros2 run orbslam3 stereo /root/ros2_ws/src/orbslam3_ros2/vocabulary/ORBvoc.txt /root/ros2_ws/src/orbslam3_ros2/config/stereo/KITTI00-02.yaml BOOL_RECTIFY [BOOL_EQUALIZE]
+source ~/ros2_ws/install/local_setup.bash
+cd ~/ros2_ws/src/orbslam3_ros2/shared
+ros2 run orbslam3 stereo /root/ros2_ws/src/orbslam3_ros2/vocabulary/ORBvoc.txt /root/ros2_ws/src/orbslam3_ros2/config/stereo/KITTI00-02.yaml BOOL_RECTIFY
 ```
 - Play in the second terminal the ros2bag in the shared directory:
 ```
