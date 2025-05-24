@@ -1,6 +1,6 @@
 ## Building
 ```
-cd orb3slam
+cd orb3slam3
 docker build -t orbslam3_foxy .
 ```
 
@@ -32,7 +32,7 @@ xhost +local:docker # Remember always to execute this in your host machine
 ```
 source ~/ros2_ws/install/local_setup.bash
 cd ~/ros2_ws/src/orbslam3_ros2/shared
-ros2 run orbslam3 stereo /root/ros2_ws/src/orbslam3_ros2/vocabulary/ORBvoc.txt /root/ros2_ws/src/orbslam3_ros2/config/stereo/KITTI00-02.yaml BOOL_RECTIFY
+ros2 run orbslam3 stereo /root/ros2_ws/src/orbslam3_ros2/vocabulary/ORBvoc.txt /root/ros2_ws/src/orbslam3_ros2/config/stereo/KITTI04-12.yaml BOOL_RECTIFY
 ```
 - Play in the second terminal the ros2bag in the shared directory:
 ```
