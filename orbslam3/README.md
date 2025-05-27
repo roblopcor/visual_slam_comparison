@@ -24,10 +24,6 @@ xhost -local:root  # Revocar permiso al terminar
 
 ## Inside container
 
-```
-xhost +local:docker # Remember always to execute this in your host machine
-```
-
 - Open first terminal:
 ```
 source ~/ros2_ws/install/local_setup.bash
@@ -36,10 +32,16 @@ ros2 run orbslam3 stereo /root/ros2_ws/src/orbslam3_ros2/vocabulary/ORBvoc.txt /
 ```
 - Play in the second terminal the ros2bag in the shared directory:
 ```
-docker exec -it orbslam3_container bash # Para abrir otro terminal del contenedor
+source ~/ros2_ws/install/local_setup.bash
 cd ~/ros2_ws/src/orbslam3_ros2/shared
 ros2 bag play <ros2bag_folder_name>
 ```
 
 ## Extras
  Ref: https://github.com/zang09/ORB_SLAM3_ROS2.git
+ ```
+xhost +local:docker # Remember always to execute this in your host machine
+```
+```
+ docker exec -it orbslam3_container bash # Para abrir otro terminal del contenedor
+```
