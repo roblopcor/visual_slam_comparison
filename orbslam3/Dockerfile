@@ -89,8 +89,8 @@ RUN sed -i 's|set(ORB_SLAM3_ROOT_DIR.*)|set(ORB_SLAM3_ROOT_DIR "/root/ros2_ws/sr
 # Reemplazar los tópicos de las cámaras en stereo-slam-node.cpp
 # RUN sed -i 's|"camera/left"|"/cam0/image_raw"|' /root/ros2_ws/src/orbslam3_ros2/src/stereo/stereo-slam-node.cpp && \
 #    sed -i 's|"camera/right"|"/cam1/image_raw"|' /root/ros2_ws/src/orbslam3_ros2/src/stereo/stereo-slam-node.cpp
-sed -i 's|left_sub = .*"camera/left");|left_sub = std::make_shared<message_filters::Subscriber<ImageMsg> >(this, "cam0/image_raw");|' /root/ros2_ws/src/orbslam3_ros2/src/stereo/stereo-slam-node.cpp
-sed -i 's|right_sub = .*"camera/right");|right_sub = std::make_shared<message_filters::Subscriber<ImageMsg> >(this, "cam1/image_raw");|' /root/ros2_ws/src/orbslam3_ros2/src/stereo/stereo-slam-node.cpp
+RUN sed -i 's|left_sub = .*"camera/left");|left_sub = std::make_shared<message_filters::Subscriber<ImageMsg> >(this, "cam0/image_raw");|' /root/ros2_ws/src/orbslam3_ros2/src/stereo/stereo-slam-node.cpp
+    sed -i 's|right_sub = .*"camera/right");|right_sub = std::make_shared<message_filters::Subscriber<ImageMsg> >(this, "cam1/image_raw");|' /root/ros2_ws/src/orbslam3_ros2/src/stereo/stereo-slam-node.cpp
 
 
 WORKDIR /root/ros2_ws/src/ORB_SLAM3/Thirdparty/Sophus/build
