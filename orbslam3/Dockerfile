@@ -1,7 +1,5 @@
 FROM ros:foxy
 
-LABEL maintainer="robertolopezcortes114@gmail.com"
-
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y \
