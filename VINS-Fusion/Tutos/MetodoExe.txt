@@ -18,4 +18,4 @@ Ejecución del método VINS-Fusion (https://github.com/HKUST-Aerial-Robotics/VIN
    	
 4. Abrir tercera instancia del mismo contenedor y ejecutar el nodo de odometría (modificar ruta si no se ejecuta desde catkin_ws)
 	rosrun vins kitti_odom_test ~/catkin_ws/src/VINS-Fusion/config/kitti_odom/kitti_config04-12.yaml src/VINS-Fusion/dataset/sequences/05/
-	rosrun vins kitti_odom_test ~/catkin_ws/src/VINS-Fusion/config/kitti_odom/kitti_config04-12.yaml src/VINS-Fusion/dataset/sequences/06/
+
