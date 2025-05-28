@@ -86,37 +86,47 @@ ros2 run orbslam3 image_publisher.py
 
 ### 1. Desde la máquina host:
 - Dentro del directorio VINS-Fusion/docker construir imagen
+  	```
 	docker build -t vins-fusion-rviz .
-
+	```
 - Descargar docker-compose
+  	```
 	sudo apt update
 	sudo apt install docker-compose
-	
+	```
 Pasos:
 1. Cambiar tura de crpeta compartuda en docker-compose.yaml, en volumes:
    - ~/visual_slam_comparison/VINS-FUSION:/root/catkin_ws/src
-
+     
 2. Otorga permisos al entorno gráfico (cada vez que abras un nuevo terminal)
+   	```
 	xhost +local:root
-
+	```
 3. Levanta el contenedor
+	```
 	docker-compose up
-
+	```
 4. Abrir nuevo terminal y entrar en el container
+   	```
 	docker exec -it vins_fusion_rviz bash
-
+	```
 ### 2. En cada terminal del contenedor:
 
 5. Cargar entorno de ROS
+   	```
 	source /opt/ros/kinetic/setup.bash
 	source /root/catkin_ws/devel/setup.bash
-
+	```
 6. Ejecutar comando deseado, ej:
+   	```
 	roslaunch vins vins_rviz.launch
-
+	```
 7. Abrir segunda instancia del mismo contenedor y ejecutar nodo de fusion (opcional)
+    	```
    	rosrun vins kitti_odom_test ~/catkin_ws/src/VINS-Fusion/config/kitti_odom/kitti_config04-12.yaml src/VINS-Fusion/dataset/sequences/05/
-
+	```
 8. Detener el contenedor
 	Crtl+C
+	```
 	docker-compose down
+ 	```
