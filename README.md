@@ -51,7 +51,7 @@ ros2 run ov2slam image_publisher.py
 docker start orbslam3_container
 ```
 
-- Abrir tres terminales con:
+- Abrir dos terminales con:
 ```
 docker exec -it orbslam3_container bash
 ```
