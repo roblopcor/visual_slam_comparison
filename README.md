@@ -124,7 +124,7 @@ Pasos:
 7. Abrir segunda instancia del mismo contenedor y ejecutar nodo de fusion (opcional):
    	```
       	rosrun vins kitti_odom_test ~/catkin_ws/src/VINS-Fusion/config/kitti_odom/kitti_config04-12.yaml src/VINS-Fusion/dataset/sequences/05/
-    	```
+    	
 8. Detener el contenedor
 	Crtl+C
 	```
