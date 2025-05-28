@@ -69,7 +69,7 @@ ros2 run orbslam3 stereo /root/ros2_ws/src/orbslam3_ros2/vocabulary/ORBvoc.txt /
 ```
 source ~/ros2_ws/install/local_setup.bash
 cd ~/ros2_ws/src/orbslam3_ros2/shared
-ros2 run orbslam3_ros2 image_publisher.py
+ros2 run orbslam3 image_publisher.py
 ```
 
 ## VINS-FUSION
