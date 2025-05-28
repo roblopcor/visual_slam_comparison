@@ -26,14 +26,24 @@ docker exec -it ov2slam_container bash
 
 - Primer terminal
 ```
+# DOCKER
 source /ws/install/setup.bash
 ros2 run ov2slam ov2slam_node /ws/src/ov2slam/parameters_files/average/kitti/kitti_04-12.yaml
 ```
-
+```
+# NATIVO
+ros2 run ov2slam ov2slam_node /home/iganan/ros2_ws/src/ov2slam/parameters_files/average/kitti/kitti_04-12.yaml
+```
 - Segundo terminal
 ```
+# DOCKER
 source /ws/install/setup.bash
 ros2 run rviz2 rviz2 -d /ws/src/ov2slam/ov2slam_visualization.rviz 
+```
+
+```
+# NATIVO
+ros2 run rviz2 rviz2 -d /home/iganan/ros2_ws/src/ov2slam/ov2slam_visualization.rviz
 ```
 
 - Tercer terminal
