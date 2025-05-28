@@ -8,7 +8,7 @@ Es necesario ejecutar en la máquina host para permitir la comunicación gráfic
 xhost +local:docker
 ```
 
-## Ov2SLAM
+## OV2-SLAM
 
 ### 1. Desde la máquina host:
 
