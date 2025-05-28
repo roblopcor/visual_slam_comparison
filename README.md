@@ -22,7 +22,7 @@ docker start ov2slam_container
 docker exec -it ov2slam_container bash
 ```
 
-### 2. En cada terminal:
+### 2. En cada terminal del contenedor:
 
 - Primer terminal
 ```
@@ -56,7 +56,7 @@ docker start orbslam3_container
 docker exec -it orbslam3_container bash
 ```
 
-### 2. En cada terminal:
+### 2. En cada terminal del contenedor:
 
 - Primer terminal
 ```
