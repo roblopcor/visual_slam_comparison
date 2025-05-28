@@ -14,8 +14,8 @@ Ejecución del método VINS-Fusion (https://github.com/HKUST-Aerial-Robotics/VIN
    	roslaunch vins vins_rviz.launch
    	
 3. Abrir segunda instancia del mismo contenedor y ejecutar nodo de fusion (opcional)
-   	rosrun loop_fusion loop_fusion_node ~/catkin_ws/src/VINS-Fusion/config/kitti_odom/kitti_config00-02.yaml
+   	rosrun loop_fusion loop_fusion_node ~/catkin_ws/src/VINS-Fusion/config/kitti_odom/kitti_config04-12.yaml
    	
 4. Abrir tercera instancia del mismo contenedor y ejecutar el nodo de odometría (modificar ruta si no se ejecuta desde catkin_ws)
-	rosrun vins kitti_odom_test ~/catkin_ws/src/VINS-Fusion/config/kitti_odom/kitti_config00-02.yaml src/VINS-Fusion/dataset/sequences/00/
-
+	rosrun vins kitti_odom_test ~/catkin_ws/src/VINS-Fusion/config/kitti_odom/kitti_config04-12.yaml src/VINS-Fusion/dataset/sequences/05/
+	rosrun vins kitti_odom_test ~/catkin_ws/src/VINS-Fusion/config/kitti_odom/kitti_config04-12.yaml src/VINS-Fusion/dataset/sequences/06/
